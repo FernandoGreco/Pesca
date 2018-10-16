@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var cuki=document.cookie.indexOf('ticket=');
+if(cuki=="" || document.cookie==""){
+		var person = {user:document.getElementById("user").value, senha:document.getElementById("pass").value, tipo:"1"};
+		$(".butt").click(function(){
+			$.post("../adm/login.php",person,
+			function(data,status){
+				if(status=="success"){
+					if(data!="0"){
+						document.cookie = "ticket="+data+";";
+						window.location = "edit.php";
+					}
+				}else{
+				}
+			});
+		});
+	}else{
+		alert('to aq');
+		var person = {cookie:cuki,tipo:"2"};
+		$(".butt").click(function(){
+			$.post("../adm/login.php",person,
+			function(data,status){
+				if(status=="success"){
+					if(data=="true"){
+						window.location = "edit.php";						
+					}else{
+						//erro ticket invalido
+						document.cookie ="ticket=;"
+						
+					}
+				}else{
+					
+				}
+			});
+		});
+		
+	}
+	
+});
+</script>
+</head>
+<body>
+<form>
+	<input type="text" id="user"><br>
+	<input type="password" id="pass"><br>
+	<input type="button" class="butt" value="Entrar">
+</form>
+</body>
+</html>
