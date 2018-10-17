@@ -102,23 +102,30 @@ abbr[data-original-title] {
 /* Codigos Adicionais Menu */
 /* comandos do logo*/
 
+.nomeLogo{
+  position: absolute;
+  color: white;
+   z-index: 5;
+     margin: 1% 0% 0% 13%;
+     position: fixed;
+}
 
 .imglogo {
-  width: 200px;
-  height: 200px;
+  width: 145px;
+  height: 145px;
   margin-left: 2%;
-  margin-bottom: 0px;
-position: absolute;
-background-color:  #008BFF;
-z-index: 4;
-border-radius: 100%;
-padding: 10px;
+  margin-top: -23px;
+  position: absolute;
+  background-color:  #008BFF;
+  z-index: 4;
+  border-radius: 100%;
+  padding: 10px;'
 }
 
 .imgMenu{
-width: 50px;
-height: 50px;
-margin-right: 13%;
+width: 53px;
+height: 53px;
+margin-right: 12%;
 }
 div.logo {
 	
@@ -274,14 +281,18 @@ div.carousel-inner img {
 }
 
 .imglogo {
-  width: 80px;
-  height: 80px;
-  margin-left: 2%;
-  margin-bottom: 0px;
-position: absolute;
-background-color: red;
+  display: none;
 }
 
+
+.imgMenu{
+  position: absolute;
+display: initial;
+margin-bottom: 5%;
+margin-left: 5%;
+width: 60px;
+height: 60px;
+}
 
 li a.active, li a:hover {
 background-color: #008BFF;
@@ -938,6 +949,8 @@ pre code {
 }
 
 @media (min-width: 576px) {
+
+
   .container {
     max-width: 540px;
 	font-size: 5%;
@@ -945,6 +958,8 @@ pre code {
 }
 
 @media (min-width: 768px) {
+
+
   .container {
     max-width: 720px;
 	font-size: 25%;
@@ -952,6 +967,9 @@ pre code {
 }
 
 @media (min-width: 992px) {
+
+
+
   .container {
     max-width: 960px;
 	font-size: 50%;
@@ -959,6 +977,7 @@ pre code {
 }
 
 @media (min-width: 1200px) {
+
   .container {
     max-width: 1140px;
 	font-size: 75%;
@@ -2145,6 +2164,12 @@ pre code {
 }
 
 @media (max-width: 767.98px) {
+
+      .imglogo {
+  width: 100px;
+  height: 100px;
+}
+
   .table-responsive-md {
     display: block;
     width: 100%;
@@ -2158,6 +2183,9 @@ pre code {
 }
 
 @media (max-width: 991.98px) {
+
+ 
+
   .table-responsive-lg {
     display: block;
     width: 100%;
@@ -2171,6 +2199,9 @@ pre code {
 }
 
 @media (max-width: 1199.98px) {
+     .nomeLogo{
+  display: none;
+}
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -6311,7 +6342,7 @@ button.close {
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  
 }
 
 .carousel-control-next-icon {
